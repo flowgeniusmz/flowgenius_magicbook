@@ -1,0 +1,44 @@
+asyncio                     # Asynchronous I/O, event loop, and coroutines support
+beautifulsoup4              # HTML and XML parsing library
+bs4                         # Alias for BeautifulSoup4, HTML/XML parsing
+clip                        # OpenAI's Contrastive Language-Image Pre-Training model
+extra_streamlit_components  # Additional components for Streamlit
+faiss-cpu                   # Efficient similarity search and clustering of dense vectors
+ffmpeg                      # Multimedia framework for handling audio and video
+folium                      # Python library for creating interactive maps
+google-api-python-client    # Google API client library for Python
+googlemaps                  # Python client library for Google Maps API
+ipython                     # Interactive computing environment for Python
+moviepy                     # Video editing with Python
+nest-asyncio                # Patch for asyncio to allow nested event loops
+numpy                       # Numerical computing library for Python
+opencv-python-headless      # Computer vision library (headless version)
+openai                      # OpenAI API client library
+pandas                      # Data manipulation and analysis library
+pillow                      # Python Imaging Library (fork)
+playwright                  # Browser automation library
+plotly                      # Interactive plotting library
+pydantic                    # Data validation and settings management using Python type hints
+pydub                       # Audio file manipulation library
+pygwalker                   # Python implementation of data visualization tool
+PyScrappy                   # Web scraping framework (note: likely a typo of 'Scrapy')
+pytube                      # YouTube video downloader library
+requests                    # HTTP library for making requests
+scrapegraphai               # AI-powered web scraping tool
+Scrapy                      # Web scraping framework
+simple_salesforce           # Salesforce API client library
+streamlit                   # Web app framework for data science and machine learning
+streamlit-folium            # Folium integration for Streamlit
+streamlit_elements          # Custom elements for Streamlit
+streamlit_extras            # Additional components and utilities for Streamlit
+stripe                      # Stripe payment processing API client
+supabase                    # Supabase client library for Python
+tavily-python               # Tavily AI search API client library
+temp                        # Temporary file and directory creation (likely a custom package)
+torch                       # PyTorch deep learning library
+urllib3                     # HTTP client library
+webscraping                 # Web scraping utilities (likely a custom package)
+WebScraperAPI               # Web Scraper API client library
+yelpapi                     # Yelp Fusion API client library
+youtube-transcript-api      # YouTube transcript/subtitle API client
+youtube_dl                  # Command-line program to download videos from YouTube

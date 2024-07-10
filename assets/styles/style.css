@@ -1,0 +1,119 @@
+/* styles.css */
+
+/* Main background and text colors */
+.stApp {
+    background-color: #2D1B47;
+    color: #F0E6FF;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    font-family: serif;
+    color: #FFD700;
+}
+
+/* Paragraphs and default text */
+p, div {
+    font-family: sans-serif;
+    color: #F0E6FF;
+}
+
+/* Links */
+a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FFF3B0;
+    text-decoration: underline;
+}
+
+/* Buttons */
+.stButton > button {
+    background-color: #8A4FFF;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-family: sans-serif;
+}
+
+.stButton > button:hover {
+    background-color: #9D6FFF;
+}
+
+/* Text inputs */
+.stTextInput > div > div > input {
+    background-color: #3D2960;
+    color: #F0E6FF;
+    border: 1px solid #B8A2E3;
+}
+
+/* Sliders */
+.stSlider > div > div > div > div {
+    background-color: #FFD700;
+}
+
+/* Selectbox */
+.stSelectbox > div > div > select {
+    background-color: #3D2960;
+    color: #F0E6FF;
+    border: 1px solid #B8A2E3;
+}
+
+/* Multiselect */
+.stMultiSelect > div > div > div {
+    background-color: #3D2960;
+    color: #F0E6FF;
+    border: 1px solid #B8A2E3;
+}
+
+/* Checkbox */
+.stCheckbox > label > span {
+    color: #F0E6FF;
+}
+
+/* Radio buttons */
+.stRadio > div {
+    color: #F0E6FF;
+}
+
+/* Dataframe */
+.dataframe {
+    background-color: #3D2960;
+    color: #F0E6FF;
+}
+
+/* Sidebar */
+.css-1d391kg {
+    background-color: #3D2960;
+}
+
+/* Sidebar title */
+.css-163ttbj {
+    color: #FFD700;
+}
+
+/* File uploader */
+.stFileUploader > div > input::file-selector-button {
+    background-color: #8A4FFF;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+}
+
+.stFileUploader > div > input::file-selector-button:hover {
+    background-color: #9D6FFF;
+}
+
+/* Progress bar */
+.stProgress > div > div > div > div {
+    background-color: #FFD700;
+}
+
+/* Tooltips */
+.stTooltipIcon {
+    color: #FFD700;
+}
