@@ -6,6 +6,7 @@ from classes import clsPageSetup as ps
 # st.set_page_config(page_title=st.secrets.app.name, page_icon=st.secrets.app.icon, layout=st.secrets.app.layout, initial_sidebar_state=st.secrets.app.sidebar, menu_items={key: value for key, value in zip(st.secrets.app.menu_keys, st.secrets.app.menu_values)})
 ps.PageUtilities.app_style()
 ps.PageUtilities.app_logo()
+page = 0
 
 
 
@@ -58,7 +59,7 @@ st.markdown("""
 if st.button("Get Started →"):
     # st.markdown("[Redirecting to Start Page](https://magicbookai.streamlit.app/start)")
     # st.markdown('<meta http-equiv="refresh" content="0; URL=https://magicbookai.streamlit.app/start">', unsafe_allow_html=True)
-    st.switch_page()
+    st.switch_page("start.py")
 
 # st.markdown("""
 # <div style="text-align: center; padding: 20px; max-width: 800px; margin: 0 auto;">

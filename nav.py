@@ -11,5 +11,5 @@ def create_pages():
 
 def get_navigation():
     pages = create_pages()
-    selected_page = st.navigation(pages=pages)
+    selected_page = st.navigation(pages=pages,)
     selected_page.run()

@@ -3,8 +3,10 @@ from classes import clsPageSetup as ps
 from typing import Literal
 
 # 0. App Config
+page = 2
 ps.PageUtilities.app_style()
 ps.PageUtilities.app_logo()
+ps.PageUtilities.page_header(page_number=page)
 
 if "story_page_count" not in st.session_state:
     st.session_state.story_page_count = 10
@@ -55,7 +57,8 @@ if st.session_state.create_step == 0:
     with right_btn_placeholder:
         rbutton = get_start_button()
     with page_placeholder:
-        st.image(image="assets/images/book/frontbook.png")
+        #st.image(image="assets/images/book/frontbook.png")
+        ps.PageUtilities.book_background(type="front")
 
 elif st.session_state.create_step >= 0 and st.session_state.create_step < st.session_state.story_page_count:
     with left_btn_placeholder:
@@ -63,7 +66,7 @@ elif st.session_state.create_step >= 0 and st.session_state.create_step < st.ses
     with right_btn_placeholder:
         rbutton = get_next_button()
     with page_placeholder:
-        st.image(image="assets/images/book/openbook.png")
+        ps.PageUtilities.book_background(type="open")
 
 elif st.session_state.create_step == st.session_state.story_page_count:
     with left_btn_placeholder:
@@ -71,11 +74,11 @@ elif st.session_state.create_step == st.session_state.story_page_count:
     with right_btn_placeholder:
         rbutton = get_finish_button()
     with page_placeholder:
-        st.image(image="assets/images/book/openbook.png")
+        ps.PageUtilities.book_background(type="open")
 
 elif st.session_state.create_step >= st.session_state.story_page_count:
     with page_placeholder:
-        st.image(image="assets/images/book/backbook.png")
+        ps.PageUtilities.book_background(type="back")
     with left_btn_placeholder:
         lbutton = get_previous_button()
 

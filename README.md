@@ -11,3 +11,10 @@ Serif font to match the logo style
 dark purple 503B57
 off white #F5F4DE
 bright purple #794392
+
+
+#D4AF89
+#DCB793
+#273A44
+#535F5B
+closed book
