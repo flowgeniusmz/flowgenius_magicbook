@@ -59,7 +59,7 @@ st.markdown("""
 if st.button("Get Started →"):
     # st.markdown("[Redirecting to Start Page](https://magicbookai.streamlit.app/start)")
     # st.markdown('<meta http-equiv="refresh" content="0; URL=https://magicbookai.streamlit.app/start">', unsafe_allow_html=True)
-    st.switch_page("start.py")
+    st.switch_page("app/start.py")
 
 # st.markdown("""
 # <div style="text-align: center; padding: 20px; max-width: 800px; margin: 0 auto;">
