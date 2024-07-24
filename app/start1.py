@@ -24,45 +24,53 @@ if "elements_initialized" not in st.session_state:
     st.session_state.uploaded_image_type = None
     st.session_state.submitted = False
     st.session_state.approved = False
+    st.session_state.current_step = 1
 
-main_container = st.container(border=False)
+main_container = st.container()
 with main_container:
-    cols = st.columns(spec=2, vertical_alignment="top")
+    cols = st.columns(2)
     with cols[0]:
-        form_container = st.container(border=True, height=400)
-        submit_placeholder = st.empty()
-        with submit_placeholder:
-            if st.session_state.submitted:
-                st.success("Submitted")
+        form_container = st.container()
         with form_container:
-            style_elements_form = st.form(key="story_elements", border = False)
-            with style_elements_form:
-                genre = st.text_input("Genre")
-                setting = st.text_input("Setting")
+            if st.session_state.current_step == 1:
+                st.markdown("### Welcome to the storybook creator")
+                st.markdown("Upload the image of your loved one:")
                 uploaded_image = st.file_uploader(label="Upload an Image", type=["png", "jpg", "jpeg", "gif"])
-                submit = st.form_submit_button("Submit", type="primary", use_container_width=True)
+                if uploaded_image is not None:
+                    st.session_state.uploaded_image = uploaded_image
+                    st.image(uploaded_image, caption='Uploaded Image', use_column_width=True)
+                    st.markdown("Great Image! If you're satisfied by this upload, let's continue with selecting some story elements. Hit 'Next' to continue.")
+                
+                next_btn = st.button("Next")
+                if next_btn:
+                    st.session_state.current_step = 2
+
+            elif st.session_state.current_step == 2:
+                genre = st.text_input("Genre", value=st.session_state.genre)
+                setting = st.text_input("Setting", value=st.session_state.setting)
+                prev_btn = st.button("Previous")
+                submit = st.button("Submit")
                 if submit:
-                    # with submit_placeholder:
-                    #     st.success("Submitted")
+                    st.session_state.genre = genre
+                    st.session_state.setting = setting
                     st.session_state.submitted = True
+                if prev_btn:
+                    st.session_state.current_step = 1
             
     with cols[1]:
-        title_container = st.container(border=True, height=400)
-        approve_placeholder = st.empty()
-        with approve_placeholder:
-            if st.session_state.approved:
-                st.success("Approved")
+        title_container = st.container()
         with title_container:
-            title_summary_form = st.form(key="title_summary", border=False)
+            title_summary_form = st.form(key="title_summary")
             with title_summary_form:
                 title = st.text_input(label="Title", value=st.session_state.title)
                 summary = st.text_area(label="Summary", value=st.session_state.summary)
-                approve = st.form_submit_button(label="Approve", type="primary", use_container_width=True)
+                approve = st.form_submit_button(label="Approve")
                 if approve:
-                    # with approve_placeholder:
-                    #     st.success("Approved")
+                    st.session_state.title = title
+                    st.session_state.summary = summary
                     st.session_state.approved = True
+        
     if st.session_state.approved and st.session_state.submitted:
-        create_btn = st.button(label="Next: Create Your Story", type="primary", use_container_width=True)
+        create_btn = st.button(label="Next: Create Your Story")
         if create_btn:
             st.switch_page("app/create.py")
